@@ -16,7 +16,7 @@ export async function GET() {
     location: "India",
     available_for_hire: true,
     summary:
-      "Rajat Kumar Dua (RajatWorks) is a self-taught full-stack developer and UI/UX designer from India. He builds React, Next.js, React Native/Expo apps, AI-powered tools, and cinematic web experiences. Available for freelance and remote full-time roles.
+      "Rajat Kumar Dua (RajatWorks) is a self-taught full-stack developer and UI/UX designer from India. He builds React, Next.js, React Native/Expo apps, AI-powered tools, and cinematic web experiences. Available for freelance and remote full-time roles.",
     
     services: [
       {
@@ -85,3 +85,4 @@ export async function GET() {
     },
   });
 }
+
