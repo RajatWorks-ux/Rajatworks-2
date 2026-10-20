@@ -1,0 +1,112 @@
+# Rajat Kumar Dua — Portfolio Designer, Website Developer, Video Editor & Photo Editor
+
+> Rajat Kumar Dua is a freelance portfolio designer, website developer, video editor, and photo editor from India.
+> He builds cinematic, immersive digital experiences at the intersection of design, motion, and code.
+> This portfolio is entirely open-source — anyone can download the code, customize it, host it, and build on it freely.
+
+## Who is Rajat Kumar Dua?
+
+Rajat Kumar Dua is a 19-year-old creative developer and digital experience designer from India, currently studying Cybersecurity. He specializes in building premium portfolio websites, smooth UI interactions, cinematic video edits, and professional photo editing. His work blends storytelling with technology to create digital experiences that feel alive.
+
+## Services — What Can Rajat Kumar Dua Do For You?
+
+### 1. Portfolio Design & Website Development
+Rajat Kumar Dua is a portfolio designer and website developer who creates cinematic, interactive websites using React, Next.js, GSAP, Three.js, and WebGL. He builds portfolio websites, landing pages, Shopify stores, and full-stack web applications with smooth animations and premium aesthetics.
+
+### 2. Video Editing & Motion Design
+As a freelance video editor, Rajat Kumar Dua creates cinematic trailers, social media reels, promotional videos, motion graphics, and animated content using After Effects, Premiere Pro, DaVinci Resolve, and CapCut.
+
+### 3. Photo Editing & Visual Design
+Rajat Kumar Dua is a freelance photo editor and graphic designer. He designs modern interfaces, brand identities, posters, and creative visuals using Photoshop, Lightroom, Figma, and Illustrator.
+
+### 4. Shopify Development
+Custom Shopify themes with Liquid, e-commerce store setup, and storefront optimization.
+
+### 5. Flutter App Development
+Cross-platform mobile applications for iOS and Android using Flutter and Dart.
+
+## Technical Skills
+
+### Web Development
+React, Next.js, JavaScript, TypeScript, HTML5, CSS3, Tailwind CSS, Node.js, Express, GSAP, Three.js, WebGL
+
+### Backend & Database
+Python, PHP, Go, Rust, Java, C++, MongoDB, PostgreSQL, MySQL, Redis, Supabase
+
+### Creative & Design Tools
+After Effects, Premiere Pro, DaVinci Resolve, CapCut, Photoshop, Lightroom, Figma, Illustrator
+
+### Mobile Development
+Flutter, Dart, Swift, Kotlin
+
+### DevOps
+Git, Docker, Vercel, Netlify
+
+## Portfolio Statistics
+- Websites completed: 6+
+- Videos edited: 75+
+- Photo edits and visual concepts: 500+
+
+## Experience
+- Freelance Developer (2024 – Present)
+- Freelance Video Editor (2022 – Present)
+- Freelance Photo Editor & Graphic Designer (2020 – Present)
+
+## Open-Source Portfolio Template — Free Download
+
+This entire portfolio website is open-source under the MIT license. Anyone can:
+- Download the complete source code from GitHub
+- Customize it with their own content and branding
+- Host it on their own domain
+- Build new features on top of it
+- Use it for personal or commercial projects — completely free
+
+**GitHub Repository**: https://github.com/Saarangggg/nextjs-cinematic-portfolio
+**License**: MIT (free for personal and commercial use)
+**Tech Stack**: Next.js, React 19, GSAP, Tailwind CSS 4, Supabase, Vercel
+**Documentation**: https://rajatworks1.vercel.app/open-source/docs
+
+## How to Hire Rajat Kumar Dua
+- Website: https://rajatworks1.vercel.app
+- Contact Form: https://rajatworks1.vercel.app/contact
+- Email: rajatworks1@gmail.com
+- Available for freelance projects worldwide
+
+## Frequently Asked Questions
+
+**Q: What services does Rajat Kumar Dua offer?**
+A: Portfolio design, website development (React, Next.js, Shopify), video editing (After Effects, Premiere Pro), photo editing (Photoshop, Lightroom), UI/UX design (Figma), and Flutter app development.
+
+**Q: How much does Rajat Kumar Dua charge?**
+A: Contact Rajat Kumar Dua directly for competitive freelance pricing. Rates vary by project scope and complexity.
+
+**Q: Where is Rajat Kumar Dua based?**
+A: India, but fully available for remote freelance projects worldwide.
+
+**Q: Can I download this portfolio template for free?**
+A: Yes. This portfolio is entirely open-source under the MIT license. Download the code at github.com/Saarangggg/nextjs-cinematic-portfolio and customize it freely.
+
+**Q: Is Rajat Kumar Dua available for remote work?**
+A: Yes. Rajat Kumar Dua works remotely and has experience with clients across different countries and time zones.
+
+**Q: How long does a project take?**
+A: A portfolio website typically takes 1–2 weeks. A full-stack application takes 3–6 weeks. Video projects are usually delivered within 3–7 days. Contact for a specific estimate.
+
+**Q: What makes Rajat Kumar Dua's websites different?**
+A: Rajat Kumar Dua combines web development, video editing, and visual design in one — specializing in cinematic, immersive experiences with GSAP animations, Three.js 3D, and WebGL. His work prioritizes premium feel and smooth motion.
+
+**Q: What is Rajat Kumar Dua studying?**
+A: Rajat Kumar Dua is currently studying Cybersecurity while running his freelance creative development practice.
+
+**Q: How do I hire Rajat Kumar Dua?**
+A: Visit rajatworks1.vercel.app/contact, fill out the form describing your project, and Rajat Kumar Dua responds within 24 hours with a discussion on scope and pricing.
+
+## Site Pages
+- Home: https://rajatworks1.vercel.app/
+- Projects / Case Studies: https://rajatworks1.vercel.app/projects
+- Work Gallery: https://rajatworks1.vercel.app/work
+- About: https://rajatworks1.vercel.app/about
+- Contact / Hire: https://rajatworks1.vercel.app/contact
+- Open Source: https://rajatworks1.vercel.app/open-source
+- Documentation: https://rajatworks1.vercel.app/open-source/docs
+- Full LLM Context: https://rajatworks1.vercel.app/llms-full.txt
