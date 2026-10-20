@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
 import { jwtVerify } from 'jose';
@@ -90,3 +92,4 @@ export async function POST(request) {
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }
+
