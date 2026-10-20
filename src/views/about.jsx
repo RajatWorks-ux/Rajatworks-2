@@ -70,7 +70,7 @@ export default function AboutPage() {
         <div className="ap-card flex justify-center my-6">
           <ProfileCard
             name="Rajat Kumar Dua"
-            title="Full-Stack Developer title="Creative Developer & Designer" UI/UX Designer"
+            title="Full-Stack Developer & UI/UX Designer"
             handle="rajat"
             avatarUrl="/photo/Rajat.jpg"
             miniAvatarUrl="/photo/Rajat.jpg"
@@ -142,7 +142,7 @@ export default function AboutPage() {
           <div className="ap-card flex justify-center items-start sticky top-[15vh]">
             <ProfileCard
               name="Rajat Kumar Dua"
-              title="Full-Stack Developer title="Creative Developer & Designer" UI/UX Designer"
+              title="Full-Stack Developer & UI/UX Designer"
               handle="rajat"
               avatarUrl="/photo/Rajat.jpg"
               miniAvatarUrl="/photo/Rajat.jpg"
