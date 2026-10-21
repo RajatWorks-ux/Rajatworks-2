@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -10,10 +10,10 @@ gsap.registerPlugin(ScrollTrigger);
 const CATEGORIES = [
   {
     num: "01",
-    label: "Website",
-    title: "Web Design & Development",
+    label: "Full Stack & Web",
+    title: "Full-Stack Web Development",
     description:
-      "High-performance websites, Shopify stores, and Next.js web apps — pixel-perfect and built for conversion.",
+      "React, Next.js, TypeScript — fast, modern web apps and landing pages with GSAP animations, Supabase backends, and clean architecture built to scale.",
     icon: (
       <svg viewBox="0 0 40 40" fill="none" className="w-8 h-8 opacity-20 group-hover:opacity-60 transition-opacity duration-500">
         <rect x="4" y="8" width="32" height="24" rx="3" stroke="currentColor" strokeWidth="1.5"/>
@@ -27,33 +27,33 @@ const CATEGORIES = [
   },
   {
     num: "02",
-    label: "Photo / Poster Design",
-    title: "Visual & Graphic Design",
+    label: "Mobile Apps",
+    title: "React Native & Expo Apps",
     description:
-      "Brand identities, social media creatives, posters, and photo edits that stop the scroll and tell the story.",
+      "Cross-platform iOS and Android apps built with React Native and Expo — smooth animations, clean UI systems, and production-ready backends with Supabase or Appwrite.",
     icon: (
       <svg viewBox="0 0 40 40" fill="none" className="w-8 h-8 opacity-20 group-hover:opacity-60 transition-opacity duration-500">
-        <rect x="5" y="5" width="30" height="30" rx="3" stroke="currentColor" strokeWidth="1.5"/>
-        <circle cx="14" cy="15" r="3.5" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M5 28l9-8 6 6 5-5 10 9" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+        <rect x="12" y="3" width="16" height="34" rx="3" stroke="currentColor" strokeWidth="1.5"/>
+        <circle cx="20" cy="32" r="1.5" fill="currentColor" opacity="0.5"/>
+        <path d="M16 8h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
       </svg>
     ),
-    href: "/projects?cat=design",
+    href: "/projects?cat=mobile",
   },
   {
     num: "03",
-    label: "Video",
-    title: "Video & Motion Editing",
+    label: "AI & Automation",
+    title: "AI-Powered Products",
     description:
-      "Cinematic reels, brand films, short-form content, and motion graphics that captivate and convert audiences.",
+      "Full products built on Groq, NVIDIA NIM, and Microsoft Trellis APIs — AI chat agents, image-to-3D converters, video generation engines, and outreach automation systems.",
     icon: (
       <svg viewBox="0 0 40 40" fill="none" className="w-8 h-8 opacity-20 group-hover:opacity-60 transition-opacity duration-500">
-        <rect x="4" y="9" width="24" height="22" rx="3" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M28 15l8-5v20l-8-5V15z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
-        <path d="M13 16l7 4-7 4V16z" fill="currentColor" opacity="0.5"/>
+        <circle cx="20" cy="20" r="6" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M20 4v4M20 32v4M4 20h4M32 20h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+        <path d="M8.8 8.8l2.8 2.8M28.4 28.4l2.8 2.8M8.8 31.2l2.8-2.8M28.4 11.6l2.8-2.8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
       </svg>
     ),
-    href: "/projects?cat=video",
+    href: "/projects?cat=ai",
   },
 ];
 
@@ -94,7 +94,7 @@ export default function Work() {
     >
       <div className="max-w-4xl w-full">
 
-        {/* Header and Filters */}
+        {/* Header */}
         <div className="mb-14 md:mb-20">
           <p className="font-sans text-[10px] text-[#ff6b1a] tracking-[0.5em] uppercase mb-4 font-medium">
             {SECTION.label}
@@ -107,12 +107,11 @@ export default function Work() {
               {SECTION.heading}
             </h2>
 
-            {/* Category pills — decorative only */}
             <div className="flex flex-wrap gap-2 lg:pb-2">
-              {["Website", "Photo / Poster Design", "Video"].map((cat) => (
+              {["Full Stack", "Mobile Apps", "AI & Automation"].map((cat) => (
                 <Link
                   key={cat}
-                  href={`/projects${cat !== "All" ? `?cat=${cat.toLowerCase().split(" ")[0]}` : ""}`}
+                  href={`/projects?cat=${cat.toLowerCase().split(" ")[0]}`}
                   className="px-4 py-2 rounded-full text-[10px] md:text-xs font-medium tracking-widest uppercase transition-all duration-300 bg-transparent text-white/40 border border-white/10 hover:text-white hover:border-white/30"
                 >
                   {cat}
@@ -122,25 +121,22 @@ export default function Work() {
           </div>
         </div>
 
-        {/* 3 Category Cards */}
+        {/* Category Cards */}
         <div className="flex flex-col">
-          {CATEGORIES.map((cat, i) => (
+          {CATEGORIES.map((cat) => (
             <Link
               key={cat.num}
               href={cat.href}
               className="work-item group relative flex items-start gap-8 py-10 md:py-14 border-b border-white/8 hover:border-white/20 transition-all duration-500"
             >
-              {/* Left orange accent bar */}
               <div className="absolute left-0 top-0 bottom-0 w-px bg-[#ff6b1a] origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-500 ease-out" />
 
-              {/* Number */}
               <div className="pl-3 shrink-0 w-8 pt-1">
                 <span className="font-mono text-[10px] text-white/20 group-hover:text-[#ff6b1a] tracking-widest transition-colors duration-300">
                   {cat.num}
                 </span>
               </div>
 
-              {/* Content */}
               <div className="flex-1 min-w-0 translate-x-0 group-hover:translate-x-1.5 transition-transform duration-500 ease-out">
                 <p className="font-sans text-[10px] text-white/30 group-hover:text-[#ff6b1a]/70 tracking-[0.4em] uppercase font-light mb-2 transition-colors duration-300">
                   {cat.label}
@@ -151,7 +147,6 @@ export default function Work() {
                 <p className="font-sans text-sm text-white/35 group-hover:text-white/60 font-light leading-relaxed max-w-2xl transition-colors duration-300">
                   {cat.description}
                 </p>
-
                 <span className="mt-4 inline-flex items-center gap-1.5 text-[10px] text-white/20 group-hover:text-white/55 tracking-widest uppercase transition-colors duration-200">
                   View Projects
                   <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
@@ -160,21 +155,19 @@ export default function Work() {
                 </span>
               </div>
 
-              {/* Icon */}
               <div className="hidden md:flex shrink-0 items-center pt-2 text-white">
                 {cat.icon}
               </div>
             </Link>
           ))}
 
-          {/* 4th item — View Full Projects CTA */}
           <Link
             href="/projects"
             className="work-item group relative flex items-center gap-8 py-10 md:py-14 border-b border-white/8 hover:border-white/20 transition-all duration-500"
           >
             <div className="absolute left-0 top-0 bottom-0 w-px bg-[#ff6b1a] origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-500 ease-out" />
             <div className="pl-3 shrink-0 w-8">
-              <span className="font-mono text-[10px] text-white/20 group-hover:text-[#ff6b1a] tracking-widest transition-colors duration-300">→</span>
+              <span className="font-mono text-[10px] text-white/20 group-hover:text-[#ff6b1a] tracking-widest transition-colors duration-300">&#8594;</span>
             </div>
             <div className="flex-1 translate-x-0 group-hover:translate-x-1.5 transition-transform duration-500 ease-out">
               <p className="font-sans text-[10px] text-white/30 group-hover:text-[#ff6b1a]/70 tracking-[0.4em] uppercase font-light mb-2 transition-colors duration-300">
