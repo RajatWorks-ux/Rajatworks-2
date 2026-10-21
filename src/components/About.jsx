@@ -72,10 +72,10 @@ export default function About({ standalone = false }) {
         </div>
       )}
 
-      <div className="relative z-10 w-full min-h-screen flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20 py-32">
+      <div className="relative z-10 w-full min-h-screen flex flex-col md:flex-row items-center justify-between gap-12 md:gap-20 py-20 md:py-32">
 
         {/* Skills & Experience — LEFT on home, RIGHT on standalone */}
-        <div className={`w-full lg:w-[40%] max-w-md mt-10 lg:mt-0 flex flex-col ${standalone ? "ml-auto lg:items-start lg:text-left order-2" : "mr-auto items-start text-left order-2 lg:order-1"}`}>
+        <div className={`w-full md:w-[40%] max-w-md mt-6 md:mt-0 flex flex-col ${standalone ? "ml-auto md:items-start md:text-left order-2" : "mr-auto items-start text-left order-2 md:order-1"}`}>
           <div className="about-p w-12 h-px bg-white/15 mb-8 lg:mb-10" />
 
           <div className="flex flex-col gap-10 w-full">
@@ -124,7 +124,7 @@ export default function About({ standalone = false }) {
         </div>
 
         {/* Bio — RIGHT on home, LEFT on standalone */}
-        <div className={`w-full lg:w-[55%] max-w-2xl flex flex-col ${standalone ? "mr-auto lg:pl-10 text-left items-start order-1" : "ml-auto text-right items-end order-1 lg:order-2"}`}>
+        <div className={`w-full md:w-[55%] max-w-2xl flex flex-col ${standalone ? "mr-auto md:pl-10 text-left items-start order-1" : "ml-auto text-left md:text-right items-start md:items-end order-1 md:order-2"}`}>
           <p className="about-label text-[10px] text-[#ff6b1a] tracking-[0.5em] uppercase mb-6 font-medium">
             {SECTION.label}
           </p>
@@ -146,7 +146,7 @@ export default function About({ standalone = false }) {
               animateBy="words"
               direction="bottom"
               stepDuration={0.22}
-              className={`about-p text-sm md:text-base text-white/50 max-w-lg ${i < BIO.length - 1 ? "mb-6" : "mb-4"} font-light leading-relaxed ${standalone ? "text-left" : "text-right"}`}
+              className={`about-p text-sm md:text-base text-white/50 max-w-lg ${i < BIO.length - 1 ? "mb-6" : "mb-4"} font-light leading-relaxed ${standalone ? "text-left" : "text-left md:text-right"}`}
             />
           ))}
         </div>
