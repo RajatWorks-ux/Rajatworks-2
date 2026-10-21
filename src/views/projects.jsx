@@ -259,7 +259,9 @@ export default function ProjectsPage() {
     fetch("/api/works")
       .then((r) => r.ok ? r.json() : [])
       .then((data) => {
-        if (data && data.length > 0) {
+        // Exclude retired projects even if an older database record still exists.
+        const activeData = Array.isArray(data) ? data.filter((p) => !/voltri/i.test(`${p.title || ""} ${p.name || ""} ${p.slug || ""}`)) : [];
+        if (activeData.length > 0) {
           const normalizeCategory = (cat) => {
             const c = (cat || "").toLowerCase();
             if (c.includes("web") || c.includes("site")) return "Website";
@@ -268,7 +270,7 @@ export default function ProjectsPage() {
             if (c.includes("video") || c.includes("motion") || c.includes("film") || c.includes("edit")) return "Videos";
             return cat || "Website";
           };
-          const mapped = data.map((p) => ({
+          const mapped = activeData.map((p) => ({
             id: p.id,
             image: p.image_url || `https://picsum.photos/seed/${p.id}/800/600?grayscale`,
             text: p.title,

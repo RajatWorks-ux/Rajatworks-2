@@ -8,11 +8,11 @@ export default function VideoScrub() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const isPhone = window.innerWidth <= 480;
+    const isPhone = window.innerWidth <= 1024;
     setIsMobile(isPhone);
     setMounted(true);
 
-    const checkMobile = () => setIsMobile(window.innerWidth <= 480);
+    const checkMobile = () => setIsMobile(window.innerWidth <= 1024);
     window.addEventListener('resize', checkMobile, { passive: true });
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
@@ -315,7 +315,7 @@ export default function VideoScrub() {
           style={{
             backgroundImage: "url('/photo/hero.webp')",
             backgroundSize: "cover",
-            backgroundPosition: "65% center",
+            backgroundPosition: "72% center",
           }}
         />
         <div className="absolute inset-0 bg-black/35" />
@@ -328,30 +328,25 @@ export default function VideoScrub() {
   const cls = "absolute inset-0 w-full h-full object-cover";
   const sty = { willChange: "transform", transform: "translateZ(0)" };
 
-  // Phone: scroll-driven parallax swipe — image moves WITH finger in real time
+  // Phone/tablet: keep the cinematic 3D video, but use normal playback instead
+  // of scroll-scrubbing to avoid expensive frame seeking on touch devices.
   if (isMobile) {
     return (
       <div className="fixed inset-0 z-0 overflow-hidden bg-[#0a0a0a]">
-        {SECTION_IMAGES.map((sec, i) => (
-          <div
-            key={sec.src}
-            ref={el => {
-              mobileLayersRef.current[i] = el;
-              // Only eagerly load hero; others get src set lazily on first show
-              if (el && i === 0) el.style.backgroundImage = `url(${sec.src})`;
-            }}
-            className="absolute inset-0 w-full h-full"
-            data-bg={sec.src}
-            style={{
-              backgroundSize: 'cover',
-              backgroundPosition: i === 0 ? '65% center' : 'center top',
-              transform: i === 0 ? 'translateY(0%)' : 'translateY(100%)',
-              opacity: i === 0 ? 1 : 0,
-              willChange: 'transform, opacity',
-            }}
-          />
-        ))}
-        <div className="absolute inset-0 bg-black/45 z-10" />
+        <video
+          src="/videos/optimized.mp4"
+          poster="/photo/hero.webp"
+          className={`${cls} bg-motion-video bg-motion-video--touch`}
+          muted
+          autoPlay
+          loop
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+          disablePictureInPicture
+          suppressHydrationWarning
+        />
+        <div className="absolute inset-0 bg-black/40 z-10" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/10 to-transparent z-10" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/25 z-10" />
       </div>
@@ -362,11 +357,11 @@ export default function VideoScrub() {
   return (
     <div className="fixed inset-0 z-0 bg-[#0a0a0a]">
       <video ref={fwdRef} src="/videos/optimized.mp4" poster="/photo/hero.webp"
-        className={cls} style={{ ...sty, opacity: 1 }}
+        className={`${cls} bg-motion-video`} style={{ ...sty, opacity: 1, objectPosition: "72% center" }}
         muted playsInline preload="metadata"
         aria-hidden="true" suppressHydrationWarning />
       <video ref={revRef} src="/videos/optimized-rev.mp4"
-        className={cls} style={{ ...sty, opacity: 0 }}
+        className={`${cls} bg-motion-video`} style={{ ...sty, opacity: 0, objectPosition: "72% center" }}
         muted playsInline preload="none"
         aria-hidden="true" suppressHydrationWarning />
       <div className="absolute inset-0 bg-black/35" />

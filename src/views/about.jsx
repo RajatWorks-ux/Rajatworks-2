@@ -36,9 +36,9 @@ export default function AboutPage() {
   }, []);
 
   return (
-    <section ref={ref} className="relative w-full min-h-dvh overflow-y-auto">
+    <section ref={ref} className="about-page relative w-full min-h-dvh overflow-y-auto">
 
-      {/* Background removed — add your photo as /public/photo/profile.webp to use it */}
+      {/* The portrait already contains its typography; avoid duplicating its name/title overlay. */}
 
       {/* ── MOBILE LAYOUT ── */}
       <div className="flex flex-col px-5 pt-28 pb-10 relative z-10 md:hidden min-h-dvh">

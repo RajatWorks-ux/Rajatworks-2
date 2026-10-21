@@ -24,7 +24,7 @@ const REASONS = [
   {
     num: "04",
     title: "Real Products, Not Templates",
-    body: "Everything I've built is a real, deployed product — Knockout Gym runs on Supabase with live member data, Voltri processes actual 3D models, MIRA handles real AI conversations. I don't do mock projects.",
+    body: "Everything I've built is a real, deployed product — Knockout Gym runs on Supabase with live member data, MIRA handles real AI conversations. I don't do mock projects.",
   },
   {
     num: "05",

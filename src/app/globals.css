@@ -246,3 +246,31 @@ html::-webkit-scrollbar { display: none; }
     padding-top: 80px !important;
   }
 }
+
+/* The uploaded portrait artwork already includes its name and role typography. */
+.about-page .pc-details { display: none !important; }
+.about-page .pc-card { overflow: hidden; }
+
+/* Responsive cinematic background framing.
+   Touch devices play the same video normally; desktop keeps scroll-scrubbing. */
+.bg-motion-video {
+  object-fit: cover;
+  object-position: 72% center;
+}
+@media (max-width: 1024px) {
+  .bg-motion-video--touch { object-position: 68% center !important; }
+}
+/* Portrait phones/tablets: keep the subject visible in a tall crop. */
+@media (max-width: 1024px) and (orientation: portrait) {
+  .bg-motion-video--touch { object-position: 66% center !important; }
+}
+/* Landscape phones/tablets: use a wider crop and shift subject inward. */
+@media (max-width: 1024px) and (orientation: landscape) {
+  .bg-motion-video--touch { object-position: 72% center !important; }
+}
+@media (max-width: 600px) and (orientation: portrait) {
+  .bg-motion-video--touch { object-position: 64% center !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-page *, .bg-motion-video { scroll-behavior: auto !important; }
+}

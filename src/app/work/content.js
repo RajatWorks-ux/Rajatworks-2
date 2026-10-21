@@ -20,18 +20,6 @@ export const FALLBACK_PROJECTS = [
     id: "f2",
     num: "02",
     category: "Full Stack",
-    title: "Voltri — AI Image to 3D",
-    description:
-      "AI-powered image-to-3D model converter. Integrated Microsoft Trellis API, Supabase auth, a credit system, and geo-based pricing (INR & USD). Designed to feel like a product someone would actually pay for.",
-    tech: "React · Vite · Tailwind CSS · Supabase · Microsoft Trellis API",
-    link: "https://voltri.vercel.app/",
-    review: null,
-    image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_224914_iag0wb.jpg",
-  },
-  {
-    id: "f3",
-    num: "03",
-    category: "Full Stack",
     title: "MIRA — AI Chat Agent",
     description:
       "Multi-model AI chat agent with user authentication, persistent chat history, and a clean interface built for scale. Built and deployed solo from zero.",
@@ -41,8 +29,8 @@ export const FALLBACK_PROJECTS = [
     image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_223953_fk41hb.jpg",
   },
   {
-    id: "f4",
-    num: "04",
+    id: "f3",
+    num: "03",
     category: "Frontend",
     title: "Vakilr — Legal Marketplace",
     description:
@@ -50,11 +38,11 @@ export const FALLBACK_PROJECTS = [
     tech: "HTML · CSS · JavaScript · Animation",
     link: "https://vakilr.vercel.app/",
     review: null,
-    image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_224914_iag0wb.jpg",
+    image: "/photo/vakilr-preview.jpg",
   },
   {
-    id: "f5",
-    num: "05",
+    id: "f4",
+    num: "04",
     category: "Full Stack",
     title: "Phone Shop",
     description:
@@ -65,8 +53,8 @@ export const FALLBACK_PROJECTS = [
     image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_224631_felxid.jpg",
   },
   {
-    id: "f6",
-    num: "06",
+    id: "f5",
+    num: "05",
     category: "Full Stack",
     title: "ANON — E-Commerce",
     description:
@@ -80,10 +68,15 @@ export const FALLBACK_PROJECTS = [
 
 // CircularGallery fallback — only Cloudinary URLs (always load, no auth needed)
 export const GALLERY_ITEMS = [
-  { image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_224914_iag0wb.jpg", text: "Voltri — AI 3D", category: "Website" },
-  { image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_224944_dbhmyy.jpg", text: "Voltri — Generator", category: "Website" },
-  { image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_224955_cqbzkj.jpg", text: "Voltri — Credits", category: "Website" },
-  { image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_224934_txdsx7.jpg", text: "Voltri — Pricing", category: "Website" },
+  { image: "/photo/knockout-preview.jpg", text: "Knockout Gym — Overview", category: "Website" },
+  { image: "/photo/knockout-2.jpg", text: "Knockout Gym — Interface", category: "Website" },
+  { image: "/photo/knockout-3.jpg", text: "Knockout Gym — Mobile", category: "Website" },
+  { image: "/photo/knockout-4.jpg", text: "Knockout Gym — Dashboard", category: "Website" },
+  { image: "/photo/vakilr-preview.jpg", text: "Vakilr — Overview", category: "Website" },
+  { image: "/photo/vakilr-2.jpg", text: "Vakilr — Interface", category: "Website" },
+  { image: "/photo/vakilr-3.jpg", text: "Vakilr — Marketplace", category: "Website" },
+  { image: "/photo/vakilr-4.jpg", text: "Vakilr — Detail View", category: "Website" },
+  { image: "/photo/vakilr-5.jpg", text: "Vakilr — Mobile", category: "Website" },
   { image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_223953_fk41hb.jpg", text: "MIRA — AI Chat", category: "Website" },
   { image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_223929_vdwboh.jpg", text: "MIRA — Dashboard", category: "Website" },
   { image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_223914_fjpbk3.jpg", text: "MIRA — Interface", category: "Website" },
