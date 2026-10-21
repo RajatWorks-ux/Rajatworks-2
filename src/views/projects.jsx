@@ -324,14 +324,8 @@ export default function ProjectsPage() {
     setActiveCategory(cat);
   };
 
-  const handleItemClick = useCallback((idx) => {
-    const pool = filteredFull || allFull;
-    if (!pool || !pool[idx]) return;
-    const item = pool[idx];
-    if (item.id) {
-      router.push(`/project/${item.id}`);
-    }
-  }, [filteredFull, allFull, router]);
+  // Clicking gallery images/text does nothing — they are display only
+  const handleItemClick = useCallback(() => {}, []);
 
   const categories = ["ALL", "WEBSITE", "DESIGNS", "PHOTOS", "VIDEOS"];
 

@@ -43,7 +43,7 @@ export default function Hero() {
   return (
     <section
       ref={ref}
-      className="relative min-h-[135vh] flex flex-col justify-center px-10 md:px-24 overflow-hidden"
+      className="relative min-h-[100svh] sm:min-h-[115vh] md:min-h-[135vh] flex flex-col justify-center px-5 sm:px-10 md:px-24 overflow-hidden"
     >
       <div className="relative z-10 max-w-5xl">
         <p className="hero-label text-[10px] md:text-xs text-[#ff6b1a] tracking-[0.2em] uppercase font-bold mb-6">

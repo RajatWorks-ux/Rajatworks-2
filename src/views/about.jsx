@@ -1,10 +1,9 @@
 "use client";
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import gsap from "gsap";
 import ProfileCard from "@/components/ProfileCard";
-import { SECTION, HEADING, BIO, RESUME_URL, TECH, CREATIVE, EXPERIENCE } from "@/app/about/content";
+import { SECTION, HEADING, BIO, TECH, CREATIVE, EXPERIENCE } from "@/app/about/content";
 
 const renderParsedText = (text) => {
   if (!text) return "";
@@ -31,7 +30,6 @@ export default function AboutPage() {
       gsap.from(".ap-h", { y: 55, opacity: 0, duration: 0.8, ease: "power4.out", delay: 0.5 });
       gsap.from(".ap-bio", { y: 25, opacity: 0, duration: 0.6, delay: 0.7 });
       gsap.from(".ap-skill", { x: -10, opacity: 0, stagger: 0.04, duration: 0.4, delay: 0.9 });
-      gsap.from(".ap-img", { scale: 1.04, opacity: 0, duration: 1.4, ease: "power3.out", delay: 0.1 });
       gsap.from(".ap-card", { scale: 0.95, opacity: 0, duration: 1.2, ease: "power4.out", delay: 0.2 });
     }, ref);
     return () => ctx.revert();
@@ -40,21 +38,7 @@ export default function AboutPage() {
   return (
     <section ref={ref} className="relative w-full min-h-dvh overflow-y-auto">
 
-      {/* Background image */}
-      <div className="ap-img absolute inset-0 z-0 opacity-20">
-        <Image
-          src="/photo/Rajat.jpg"
-          alt="Rajat Kumar Dua"
-          fill
-          className="object-cover object-center filter blur-md"
-          priority
-        />
-        {/* Mobile: heavy bottom dark overlay so text is readable */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/80 to-[#080808]/30 md:hidden" />
-        {/* Desktop: side gradient */}
-        <div className="hidden md:block absolute inset-0 bg-gradient-to-l from-[#080808] via-[#080808]/90 to-transparent" />
-        <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-[#080808]/60" />
-      </div>
+      {/* Background removed — add your photo as /public/photo/profile.webp to use it */}
 
       {/* ── MOBILE LAYOUT ── */}
       <div className="flex flex-col px-5 pt-28 pb-10 relative z-10 md:hidden min-h-dvh">
@@ -87,15 +71,6 @@ export default function AboutPage() {
           </p>
         ))}
 
-        <a
-          href={RESUME_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="ap-bio self-start inline-flex items-center gap-2 px-5 py-2.5 border border-[#ff6b1a]/30 text-[#ff6b1a] text-[10px] font-bold uppercase tracking-widest rounded-full hover:bg-[#ff6b1a] hover:text-black transition-colors duration-300 mb-7"
-        >
-          View Resume
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-        </a>
 
         {/* Skills horizontal scroll */}
         <div className="space-y-4">
@@ -170,12 +145,6 @@ export default function AboutPage() {
                 </p>
               ))}
             </div>
-            <a href={RESUME_URL} target="_blank" rel="noopener noreferrer"
-              className="ap-bio inline-flex items-center gap-2 px-6 py-3 border border-[#ff6b1a]/30 text-[#ff6b1a] text-[10px] font-bold uppercase tracking-widest rounded-full hover:bg-[#ff6b1a] hover:text-black transition-colors duration-300"
-            >
-              View Resume
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-            </a>
           </div>
         </div>
 

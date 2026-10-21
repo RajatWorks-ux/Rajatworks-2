@@ -61,7 +61,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer ref={ref} className="relative border-t border-white/8 px-10 md:px-20 py-16">
+    <footer ref={ref} className="relative border-t border-white/8 px-5 sm:px-10 md:px-20 py-12 md:py-16">
 
       {/* top row */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-12 mb-16">

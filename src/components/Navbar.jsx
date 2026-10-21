@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -90,13 +89,9 @@ export default function Navbar() {
             </Link>
           )}
           <Link href="/" className="flex items-center hover:opacity-80 transition-opacity duration-300">
-            <Image
-              src="/photo/logo navbar inverse.png"
-              alt="Rajat Kumar Dua — Full-Stack Developer"
-              width={120} height={40}
-              className="h-9 w-auto"
-              priority
-            />
+            <span className="font-black text-white tracking-tighter text-xl leading-none select-none">
+              RW
+            </span>
           </Link>
         </div>
 

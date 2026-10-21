@@ -14,47 +14,23 @@ export const FALLBACK_PROJECTS = [
     tech: "React · React Router · Supabase · GSAP · Lenis · Vite",
     link: "https://musclebuilding.vercel.app/",
     review: null,
-    image: "https://res.cloudinary.com/dbshw2jxv/image/upload/v1/knockout-gym-preview",
+    image: "/photo/knockout-preview.jpg",
   },
   {
     id: "f2",
     num: "02",
-    category: "Full Stack",
-    title: "Voltri — AI Image to 3D",
-    description:
-      "AI-powered image-to-3D model converter. Integrated Microsoft Trellis API, Supabase auth, a credit system, and geo-based pricing (INR & USD). Designed to feel like a product someone would actually pay for.",
-    tech: "React · Vite · Tailwind CSS · Supabase · Microsoft Trellis API",
-    link: "https://voltri.vercel.app/",
-    review: null,
-    image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_224914_iag0wb.jpg",
-  },
-  {
-    id: "f3",
-    num: "03",
-    category: "Full Stack",
-    title: "MIRA — AI Chat Agent",
-    description:
-      "Multi-model AI chat agent with user authentication, persistent chat history, and a clean interface built for scale. Built and deployed solo from zero.",
-    tech: "React · Next.js · Node.js · Vercel",
-    link: "https://rajatworks-mira.vercel.app/",
-    review: null,
-    image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_223953_fk41hb.jpg",
-  },
-  {
-    id: "f4",
-    num: "04",
     category: "Frontend",
-    title: "Vakilr — Legal Marketplace",
+    title: "Vakilr",
     description:
       "Premium AI legal marketplace concept — dark luxury theme, cinematic background videos, glassmorphism cards, smooth animations. Demonstrates how tech can make legal services feel premium.",
     tech: "HTML · CSS · JavaScript · Animation",
     link: "https://vakilr.vercel.app/",
     review: null,
-    image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_224914_iag0wb.jpg",
+    image: "/photo/vakilr-preview.jpg",
   },
   {
-    id: "f5",
-    num: "05",
+    id: "f3",
+    num: "03",
     category: "Full Stack",
     title: "Phone Shop",
     description:
@@ -65,10 +41,10 @@ export const FALLBACK_PROJECTS = [
     image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_224631_felxid.jpg",
   },
   {
-    id: "f6",
-    num: "06",
+    id: "f4",
+    num: "04",
     category: "Full Stack",
-    title: "ANON — E-Commerce",
+    title: "ANON",
     description:
       "Fully responsive e-commerce web application with smooth shopping UX, clean UI, secure backend services, and modern web architecture.",
     tech: "Vue.js · Element UI · Vercel · Google API",
@@ -76,17 +52,23 @@ export const FALLBACK_PROJECTS = [
     review: null,
     image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_224520_k13pig.jpg",
   },
+  {
+    id: "f5",
+    num: "05",
+    category: "Full Stack",
+    title: "MIRA",
+    description:
+      "Multi-model AI chat agent with user authentication, persistent chat history, and a clean interface built for scale. Built and deployed solo from zero.",
+    tech: "React · Next.js · Node.js · Vercel",
+    link: "https://rajatworks-mira.vercel.app/",
+    review: null,
+    image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_223953_fk41hb.jpg",
+  },
 ];
 
 // CircularGallery fallback — only Cloudinary URLs (always load, no auth needed)
 export const GALLERY_ITEMS = [
-  { image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_224914_iag0wb.jpg", text: "Voltri — AI 3D", category: "Website" },
-  { image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_224944_dbhmyy.jpg", text: "Voltri — Generator", category: "Website" },
-  { image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_224955_cqbzkj.jpg", text: "Voltri — Credits", category: "Website" },
-  { image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_224934_txdsx7.jpg", text: "Voltri — Pricing", category: "Website" },
-  { image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_223953_fk41hb.jpg", text: "MIRA — AI Chat", category: "Website" },
-  { image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_223929_vdwboh.jpg", text: "MIRA — Dashboard", category: "Website" },
-  { image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_223914_fjpbk3.jpg", text: "MIRA — Interface", category: "Website" },
+  { image: "/photo/knockout-preview.jpg", text: "Knockout Gym", category: "Website" },
   { image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_224631_felxid.jpg", text: "Phone Shop", category: "Website" },
   { image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_224720_qwcqyo.jpg", text: "Phone Shop — Store", category: "Website" },
   { image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_224643_dtorqt.jpg", text: "Phone Shop — Product", category: "Website" },
@@ -98,4 +80,8 @@ export const GALLERY_ITEMS = [
   { image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_224601_caidle.jpg", text: "ANON — Product", category: "Website" },
   { image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_224529_x3rjju.jpg", text: "ANON — Cart", category: "Website" },
   { image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_224544_ytby66.jpg", text: "ANON — Mobile", category: "Website" },
+  { image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_223953_fk41hb.jpg", text: "MIRA — AI Chat", category: "Website" },
+  { image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_223929_vdwboh.jpg", text: "MIRA — Dashboard", category: "Website" },
+  { image: "https://res.cloudinary.com/dbshw2jxv/image/upload/IMG_20260222_223914_fjpbk3.jpg", text: "MIRA — Interface", category: "Website" },
+  { image: "/photo/vakilr-preview.jpg", text: "Vakilr", category: "Website" },
 ];

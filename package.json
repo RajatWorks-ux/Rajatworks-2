@@ -1,6 +1,7 @@
 {
-  "name": "sarang",
-  "version": "0.1.0",
+  "name": "rajatworks",
+  "version": "1.0.0",
+  "description": "Personal portfolio of Rajat Kumar Dua — Full-Stack Developer & UI/UX Designer. Built with Next.js, GSAP, Tailwind CSS, and Supabase.",
   "private": true,
   "scripts": {
     "dev": "next dev -p 3000",

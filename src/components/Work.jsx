@@ -3,59 +3,9 @@ import { useRef, useEffect } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { SECTION } from "@/app/work/content";
+import { SECTION, FALLBACK_PROJECTS } from "@/app/work/content";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const CATEGORIES = [
-  {
-    num: "01",
-    label: "Full Stack & Web",
-    title: "Full-Stack Web Development",
-    description:
-      "React, Next.js, TypeScript — fast, modern web apps and landing pages with GSAP animations, Supabase backends, and clean architecture built to scale.",
-    icon: (
-      <svg viewBox="0 0 40 40" fill="none" className="w-8 h-8 opacity-20 group-hover:opacity-60 transition-opacity duration-500">
-        <rect x="4" y="8" width="32" height="24" rx="3" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M4 14h32" stroke="currentColor" strokeWidth="1.5"/>
-        <circle cx="9" cy="11" r="1.2" fill="currentColor"/>
-        <circle cx="13" cy="11" r="1.2" fill="currentColor"/>
-        <circle cx="17" cy="11" r="1.2" fill="currentColor"/>
-      </svg>
-    ),
-    href: "/projects?cat=website",
-  },
-  {
-    num: "02",
-    label: "Mobile Apps",
-    title: "React Native & Expo Apps",
-    description:
-      "Cross-platform iOS and Android apps built with React Native and Expo — smooth animations, clean UI systems, and production-ready backends with Supabase or Appwrite.",
-    icon: (
-      <svg viewBox="0 0 40 40" fill="none" className="w-8 h-8 opacity-20 group-hover:opacity-60 transition-opacity duration-500">
-        <rect x="12" y="3" width="16" height="34" rx="3" stroke="currentColor" strokeWidth="1.5"/>
-        <circle cx="20" cy="32" r="1.5" fill="currentColor" opacity="0.5"/>
-        <path d="M16 8h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-      </svg>
-    ),
-    href: "/projects?cat=mobile",
-  },
-  {
-    num: "03",
-    label: "AI & Automation",
-    title: "AI-Powered Products",
-    description:
-      "Full products built on Groq, NVIDIA NIM, and Microsoft Trellis APIs — AI chat agents, image-to-3D converters, video generation engines, and outreach automation systems.",
-    icon: (
-      <svg viewBox="0 0 40 40" fill="none" className="w-8 h-8 opacity-20 group-hover:opacity-60 transition-opacity duration-500">
-        <circle cx="20" cy="20" r="6" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M20 4v4M20 32v4M4 20h4M32 20h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-        <path d="M8.8 8.8l2.8 2.8M28.4 28.4l2.8 2.8M8.8 31.2l2.8-2.8M28.4 11.6l2.8-2.8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-      </svg>
-    ),
-    href: "/projects?cat=ai",
-  },
-];
 
 export default function Work() {
   const ref = useRef(null);
@@ -90,7 +40,7 @@ export default function Work() {
     <section
       ref={ref}
       id="work-section"
-      className="relative w-full min-h-screen px-10 md:px-20 pt-64 pb-72 flex flex-col justify-center"
+      className="relative w-full min-h-screen px-5 sm:px-10 md:px-20 pt-28 sm:pt-40 md:pt-64 pb-32 sm:pb-48 md:pb-72 flex flex-col justify-center"
     >
       <div className="max-w-4xl w-full">
 
@@ -108,57 +58,57 @@ export default function Work() {
             </h2>
 
             <div className="flex flex-wrap gap-2 lg:pb-2">
-              {["Full Stack", "Mobile Apps", "AI & Automation"].map((cat) => (
-                <Link
-                  key={cat}
-                  href={`/projects?cat=${cat.toLowerCase().split(" ")[0]}`}
-                  className="px-4 py-2 rounded-full text-[10px] md:text-xs font-medium tracking-widest uppercase transition-all duration-300 bg-transparent text-white/40 border border-white/10 hover:text-white hover:border-white/30"
-                >
-                  {cat}
-                </Link>
-              ))}
+              <Link
+                href="/projects"
+                className="px-4 py-2 rounded-full text-[10px] md:text-xs font-medium tracking-widest uppercase transition-all duration-300 bg-transparent text-white/40 border border-white/10 hover:text-white hover:border-white/30"
+              >
+                Creative Archive →
+              </Link>
             </div>
           </div>
         </div>
 
-        {/* Category Cards */}
+        {/* Project Cards */}
         <div className="flex flex-col">
-          {CATEGORIES.map((cat) => (
-            <Link
-              key={cat.num}
-              href={cat.href}
+          {FALLBACK_PROJECTS.map((project) => (
+            <div
+              key={project.num}
               className="work-item group relative flex items-start gap-8 py-10 md:py-14 border-b border-white/8 hover:border-white/20 transition-all duration-500"
             >
               <div className="absolute left-0 top-0 bottom-0 w-px bg-[#ff6b1a] origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-500 ease-out" />
 
               <div className="pl-3 shrink-0 w-8 pt-1">
                 <span className="font-mono text-[10px] text-white/20 group-hover:text-[#ff6b1a] tracking-widest transition-colors duration-300">
-                  {cat.num}
+                  {project.num}
                 </span>
               </div>
 
               <div className="flex-1 min-w-0 translate-x-0 group-hover:translate-x-1.5 transition-transform duration-500 ease-out">
                 <p className="font-sans text-[10px] text-white/30 group-hover:text-[#ff6b1a]/70 tracking-[0.4em] uppercase font-light mb-2 transition-colors duration-300">
-                  {cat.label}
+                  {project.category}
                 </p>
                 <h3 className="font-sans text-xl md:text-2xl font-black text-white tracking-tighter mb-3 group-hover:text-white transition-colors duration-300">
-                  {cat.title}
+                  {project.title}
                 </h3>
                 <p className="font-sans text-sm text-white/35 group-hover:text-white/60 font-light leading-relaxed max-w-2xl transition-colors duration-300">
-                  {cat.description}
+                  {project.description}
                 </p>
-                <span className="mt-4 inline-flex items-center gap-1.5 text-[10px] text-white/20 group-hover:text-white/55 tracking-widest uppercase transition-colors duration-200">
-                  View Projects
-                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                    <path d="M2 8L8 2M8 2H4M8 2v4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
-                  </svg>
-                </span>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="mt-5 inline-flex items-center gap-2 px-5 py-2 bg-[#ff6b1a] text-black text-[10px] font-black rounded-full tracking-widest uppercase hover:bg-white hover:text-[#ff6b1a] transition-colors duration-300"
+                  >
+                    Visit Site
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                      <path d="M2 8L8 2M8 2H4M8 2v4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
+                    </svg>
+                  </a>
+                )}
               </div>
-
-              <div className="hidden md:flex shrink-0 items-center pt-2 text-white">
-                {cat.icon}
-              </div>
-            </Link>
+            </div>
           ))}
 
           <Link
@@ -171,10 +121,10 @@ export default function Work() {
             </div>
             <div className="flex-1 translate-x-0 group-hover:translate-x-1.5 transition-transform duration-500 ease-out">
               <p className="font-sans text-[10px] text-white/30 group-hover:text-[#ff6b1a]/70 tracking-[0.4em] uppercase font-light mb-2 transition-colors duration-300">
-                Full Portfolio
+                Creative Archive
               </p>
               <h3 className="font-sans text-xl md:text-2xl font-black text-white tracking-tighter group-hover:text-white transition-colors duration-300">
-                View All Projects
+                View All Designs
               </h3>
             </div>
             <div className="hidden md:flex items-center gap-2 text-white/20 group-hover:text-[#ff6b1a] transition-colors duration-300 pr-2">

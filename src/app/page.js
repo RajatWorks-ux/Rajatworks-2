@@ -15,6 +15,7 @@ import About from "../components/About";
 import Work from "../components/Work";
 import WhyMe from "../components/WhyMe";
 import Process from "../components/Process";
+import Reviews from "../components/Reviews";
 import FAQ from "../components/FAQ";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
@@ -66,6 +67,7 @@ export default function Home() {
         <Work />
         <WhyMe />
         <Process />
+        <Reviews />
         <FAQ />
         <Contact />
         <div ref={footerRef}><Footer /></div>

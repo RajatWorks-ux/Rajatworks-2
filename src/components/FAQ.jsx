@@ -12,7 +12,7 @@ const FAQS = [
   },
   {
     q: "How much do you charge?",
-    a: "Pricing is project-based, not hourly. A basic landing page starts around ₹8,000–15,000. A full-stack web app with Supabase backend starts around ₹25,000–60,000. Mobile apps start at ₹40,000+. Contact me with your requirements for an exact quote.",
+    a: "Every project is different, so pricing is always decided through discussion. Once I understand what you're building, the scope, and your timeline — we'll land on a number that works for both of us. Reach out and let's talk.",
   },
   {
     q: "Do you work with clients outside India?",
@@ -65,7 +65,7 @@ export default function FAQ() {
   const toggle = (i) => setOpen(open === i ? null : i);
 
   return (
-    <section ref={ref} className="relative w-full px-10 md:px-20 py-32 md:py-40">
+    <section ref={ref} className="relative w-full px-5 sm:px-10 md:px-20 py-20 md:py-32 lg:py-40">
       <div className="max-w-3xl w-full">
 
         <p className="faq-header text-[10px] text-[#ff6b1a] tracking-[0.5em] uppercase mb-4 font-medium">

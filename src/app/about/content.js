@@ -23,7 +23,7 @@ export const BIO = [
   "I am a *self-taught full-stack developer* and *UI/UX designer* operating under the brand *RajatWorks*. I build digital products that fuse *clean aesthetics*, *modern architecture*, and real-world usability — shipping everything independently from *Android via Termux*, no traditional desktop setup.",
   "My journey started in *2020* with a blank text editor and an `<h1>Hello World</h1>`. Four years later I've shipped *six production projects*, integrated *AI APIs*, built *e-commerce platforms*, and designed *interfaces* that feel premium.",
   "My core stack: *React*, *Next.js*, *TypeScript*, *Node.js*, *Vue.js*, *React Native/Expo* for mobile apps, *GSAP* and *Three.js* for cinematic web experiences, and *Supabase* / *MongoDB* for backend infrastructure. I also build with *AI APIs* — Groq, NVIDIA NIM, and Microsoft Trellis.",
-  "Notable projects include *Knockout Gym* (full-stack CMS for a real gym), *Voltri* (AI image-to-3D converter with credit system and geo-pricing), *MIRA* (multi-model AI chat agent), *Vakilr* (premium legal marketplace concept), and two e-commerce platforms — *Phone Shop* and *ANON*.",
+  "Notable projects include *Knockout Gym* (full-stack CMS for a real gym), *MIRA* (multi-model AI chat agent), *Vakilr* (premium legal marketplace concept), and two e-commerce platforms — *Phone Shop* and *ANON*.",
   "My design philosophy: every interface should feel *intentional*, *fast*, and *alive*. I obsess over typography, micro-interactions, and the emotional weight of negative space. Every pixel is a decision.",
   "I actively pursue *freelance projects* and *remote full-time roles* with small companies, startups, and agencies. If the work is meaningful, I'm in.",
   "Beyond screens, I'm drawn to *Vedic astrology* and *Jyotish* — studying planetary systems with the same analytical curiosity I bring to debugging. The best developers understand *patterns*, *cycles*, and *systems* at a fundamental level.",
@@ -63,7 +63,7 @@ export const EXPERIENCE = [
   { role: "React & Component Thinking",         period: "2022" },
   { role: "Full Stack Unlocked — Node + APIs",  period: "2023" },
   { role: "First Real Products — Phone Shop & ANON", period: "2023" },
-  { role: "Entering AI — Voltri (image→3D)",    period: "2024" },
+  { role: "Entering AI — Integrations & APIs",   period: "2024" },
   { role: "Production Architecture — MIRA",     period: "2025" },
   { role: "Still Building — Open to Hire",      period: "2026" },
 ];

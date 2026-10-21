@@ -92,7 +92,7 @@ export default function Contact({ standalone = false }) {
     <section
       id="contact-section"
       ref={ref}
-      className="relative min-h-screen flex flex-col justify-center px-10 md:px-20 pt-24 md:pt-20 pb-24"
+      className="relative min-h-screen flex flex-col justify-center px-5 sm:px-10 md:px-20 pt-20 md:pt-24 pb-20 md:pb-24"
     >
       <p className="contact-label text-[10px] text-[#ff6b1a] tracking-[0.5em] uppercase mb-12 font-medium">
         {SECTION.label}

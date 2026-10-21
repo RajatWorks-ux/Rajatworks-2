@@ -58,7 +58,7 @@ export default function WhyMe() {
   }, []);
 
   return (
-    <section ref={ref} className="relative w-full px-10 md:px-20 py-32 md:py-40">
+    <section ref={ref} className="relative w-full px-5 sm:px-10 md:px-20 py-20 md:py-32 lg:py-40">
       <div className="max-w-5xl w-full">
 
         <p className="text-[10px] text-[#ff6b1a] tracking-[0.5em] uppercase mb-4 font-medium">

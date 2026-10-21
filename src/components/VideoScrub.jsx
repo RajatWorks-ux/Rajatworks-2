@@ -315,7 +315,7 @@ export default function VideoScrub() {
           style={{
             backgroundImage: "url('/photo/hero.webp')",
             backgroundSize: "cover",
-            backgroundPosition: "center top",
+            backgroundPosition: "center center",
           }}
         />
         <div className="absolute inset-0 bg-black/35" />
@@ -344,7 +344,7 @@ export default function VideoScrub() {
             data-bg={sec.src}
             style={{
               backgroundSize: 'cover',
-              backgroundPosition: 'center top',
+              backgroundPosition: i === 0 ? 'center center' : 'center top',
               transform: i === 0 ? 'translateY(0%)' : 'translateY(100%)',
               opacity: i === 0 ? 1 : 0,
               willChange: 'transform, opacity',
