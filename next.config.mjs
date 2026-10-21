@@ -4,10 +4,6 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === "production",
   },
 
-  experimental: {
-    // optimizeCss DISABLED — breaks Tailwind v4 on Vercel
-  },
-
   images: {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 31536000,

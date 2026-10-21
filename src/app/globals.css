@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Explicitly scan the complete src tree so Tailwind v4 emits utilities for every route/component. */
+@source "../";
+
 @theme {
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);
