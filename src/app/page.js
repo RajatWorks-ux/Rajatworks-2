@@ -13,6 +13,9 @@ const VideoScrub = dynamic(() => import("../components/VideoScrub"), { ssr: fals
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Work from "../components/Work";
+import WhyMe from "../components/WhyMe";
+import Process from "../components/Process";
+import FAQ from "../components/FAQ";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import SeoContent from "../components/SeoContent";
@@ -23,9 +26,9 @@ export default function Home() {
 
   useEffect(() => {
     const lenis = new Lenis({
-      lerp: 0.1, // More responsive, less lag
+      lerp: 0.1,
       smoothWheel: true,
-      wheelMultiplier: 1, // Normal scroll speed
+      wheelMultiplier: 1,
     });
 
     lenis.on("scroll", () => {
@@ -33,11 +36,9 @@ export default function Home() {
       if (blurWrapRef.current && footerRef.current) {
         const footerTop = footerRef.current.getBoundingClientRect().top;
         const vh = window.innerHeight;
-        // opacity = 1 while footer is below viewport, fades as footer enters
         const opacity = footerTop >= vh ? 1 : Math.max(0, footerTop / vh);
         blurWrapRef.current.style.opacity = opacity;
       }
-
     });
 
     const tick = (time) => { lenis.raf(time * 1000); };
@@ -52,31 +53,20 @@ export default function Home() {
 
   return (
     <main>
-      {/* SEO-crawlable structured content (visually hidden) - Forced HMR refresh */}
       <SeoContent />
-
-      {/* grain */}
       <div className="grain-overlay" />
-
-      {/* difference cursor */}
       <Cursor />
-
-      {/* sticky scrubbed video — lives behind everything */}
       <VideoScrub />
-
-      {/* scroll progress indicator */}
-
-      {/* fixed nav */}
       <Navbar />
-
-      {/* bottom blur — fixed to viewport, fades when footer arrives */}
       <div ref={blurWrapRef} className="bottom-blur" />
 
-      {/* scrollable sections */}
       <div className="relative z-10">
         <Hero />
         <About />
         <Work />
+        <WhyMe />
+        <Process />
+        <FAQ />
         <Contact />
         <div ref={footerRef}><Footer /></div>
       </div>
