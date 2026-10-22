@@ -5,13 +5,21 @@ import ProjectsPage from "../../views/projects";
 
 export const metadata = {
   title:       "Projects — Case Studies & Client Work by Rajat Kumar Dua",
-  description: "Explore detailed case studies of Rajat's freelance projects — website development, video editing, and design work with client testimonials and tech breakdowns.",
+  description: "Explore Rajat Kumar Dua’s portfolio projects and case studies across web development, mobile apps, interactive design, and digital products.",
   keywords:    ["portfolio projects", "case studies", "freelance work", "client projects"],
   alternates:  { canonical: "https://rajatworks1.vercel.app/projects" },
   openGraph: {
-    title: "Projects — Rajat Kumar Dua | Case Studies & Client Work",
-    description: "Detailed case studies of web development, video editing, and design projects by Rajat Kumar Dua.",
+    title: "Projects and Case Studies — RajatWorks",
+    description: "Browse selected web, mobile, and digital product projects by Rajat Kumar Dua.",
+    images: [{ url: "/photo/about.webp", width: 852, height: 1846, alt: "RajatWorks cinematic About-section artwork" }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Projects and Case Studies — RajatWorks",
+    description: "Browse selected web, mobile, and digital product projects by Rajat Kumar Dua.",
+    images: ["/photo/about.webp"],
+  },
+
 };
 
 export default function Page() {

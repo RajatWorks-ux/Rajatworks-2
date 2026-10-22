@@ -3,13 +3,21 @@ import ContactPage from "@/views/contact";
 
 export const metadata = {
   title:       "Contact — Hire a Portfolio Designer, Website Developer, Video Editor or Photo Editor",
-  description: "Get in touch with Rajat Kumar Dua to hire Rajat Kumar Dua as a full-stack developer, React Native engineer, or UI/UX designer. Available for projects worldwide. Fast response, competitive pricing.",
+  description: "Contact Rajat Kumar Dua about web development, mobile applications, AI integrations, UI/UX design, and freelance project enquiries.",
   keywords:    ["hire website developer", "hire video editor", "hire photo editor", "hire portfolio designer", "freelance contact", "get quote website design"],
   alternates:  { canonical: "https://rajatworks1.vercel.app/contact" },
   openGraph: {
-    title: "Hire Rajat Kumar Dua — Portfolio Designer, Website Developer, Video Editor & Photo Editor",
-    description: "Contact Rajat for full-stack web development, mobile app development, AI integrations, and UI/UX design. Available worldwide.",
+    title: "Contact Rajat Kumar Dua — RajatWorks",
+    description: "Discuss a web, mobile, AI, or design project with Rajat Kumar Dua.",
+    images: [{ url: "/photo/about.webp", width: 852, height: 1846, alt: "RajatWorks cinematic About-section artwork" }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Rajat Kumar Dua — RajatWorks",
+    description: "Discuss a web, mobile, AI, or design project with Rajat Kumar Dua.",
+    images: ["/photo/about.webp"],
+  },
+
 };
 
 export default function Page() {

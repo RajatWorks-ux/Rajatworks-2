@@ -3,6 +3,7 @@ import "./globals.css";
 import TrackVisit from "@/components/TrackVisit";
 import { Analytics } from "@vercel/analytics/next";
 import NewsletterPopup from "@/components/NewsletterPopup";
+import DevicePortfolioRedirect from "@/components/DevicePortfolioRedirect";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const playfair = Playfair_Display({
@@ -26,7 +27,7 @@ export const metadata = {
     template: "%s — Rajat Kumar Dua | Full-Stack Developer",
   },
   description:
-    "Self-taught full-stack developer and UI/UX designer from India — building modern web apps, React Native mobile apps, AI-powered tools, and cinematic digital experiences.",
+    "Explore Rajat Kumar Dua’s cinematic portfolio of web development, mobile apps, AI-powered tools, visual design, and interactive digital experiences.",
   keywords: [
     "Full-Stack Developer India", "React Native Developer", "Next.js Developer",
     "UI UX Designer", "Freelance Developer India", "AI App Developer",
@@ -44,20 +45,20 @@ export const metadata = {
     url: BASE,
     siteName: "RajatWorks — Full-Stack Developer & UI/UX Designer",
     title: "Rajat Kumar Dua — Full-Stack Developer, React Native Engineer & UI/UX Designer",
-    description: "Self-taught full-stack developer and UI/UX designer building modern web apps, mobile apps, AI tools, and cinematic digital experiences.",
+    description: "Explore Rajat Kumar Dua’s cinematic mobile portfolio featuring web development, mobile apps, AI-powered tools, visual design, and interactive digital experiences.",
     images: [{
-      url: "/og-image.png",
-      width: 1200,
-      height: 630,
-      alt: "Rajat Kumar Dua — Full-Stack Developer & UI/UX Designer",
+      url: "/photo/about.webp",
+      width: 852,
+      height: 1846,
+      alt: "RajatWorks cinematic About-section artwork",
     }],
   },
 
   twitter: {
     card: "summary_large_image",
     title: "Rajat Kumar Dua — Full-Stack Developer & UI/UX Designer",
-    description: "Self-taught full-stack developer building modern web apps, React Native apps, and AI-powered tools.",
-    images: ["/og-image.png"],
+    description: "Explore Rajat Kumar Dua’s cinematic mobile portfolio featuring web development, mobile apps, AI-powered tools, visual design, and interactive digital experiences.",
+    images: ["/photo/about.webp"],
     creator: "@rajat",
   },
 
@@ -162,9 +163,8 @@ const jsonLd = {
       "@type": "ProfessionalService",
       "@id": `${BASE}/#localbusiness`,
       "name": "RajatWorks — Full-Stack Developer & Designer",
-      "image": `${BASE}/og-image.png`,
+      "image": `${BASE}/photo/about.webp`,
       "url": BASE,
-      "telephone": "+91-0000000000",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "India",
@@ -271,6 +271,7 @@ export default function RootLayout({ children }) {
         )}
       </head>
       <body>
+        <DevicePortfolioRedirect />
         <TrackVisit />
         <div className="bottom-blur" aria-hidden="true" />
         {children}
