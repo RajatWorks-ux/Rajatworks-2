@@ -5,7 +5,7 @@ export const metadata = {
   title:       "Contact — Hire a Portfolio Designer, Website Developer, Video Editor or Photo Editor",
   description: "Contact Rajat Kumar Dua about web development, mobile applications, AI integrations, UI/UX design, and freelance project enquiries.",
   keywords:    ["hire website developer", "hire video editor", "hire photo editor", "hire portfolio designer", "freelance contact", "get quote website design"],
-  alternates:  { canonical: "https://rajatworks1.vercel.app/contact" },
+  alternates:  { canonical: "https://rajatworks01.vercel.app/contact" },
   openGraph: {
     title: "Contact Rajat Kumar Dua — RajatWorks",
     description: "Discuss a web, mobile, AI, or design project with Rajat Kumar Dua.",
