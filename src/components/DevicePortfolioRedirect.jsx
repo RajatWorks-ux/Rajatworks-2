@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-const DESKTOP_PORTFOLIO_URL = "https://rajatworks-ux.vercel.app/";
+const DESKTOP_PORTFOLIO_URL = "https://rajatworks1.vercel.app/";
 
 function isPhoneOrTablet() {
   if (typeof window === "undefined") return true;
