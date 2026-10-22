@@ -13,7 +13,7 @@ const playfair = Playfair_Display({
   display: "swap"
 });
 
-const BASE = "https://rajatworks1.vercel.app";
+const BASE = "https://rajatworks01.vercel.app";
 
 export const viewport = {
   themeColor: "#ff6b1a",
@@ -47,10 +47,10 @@ export const metadata = {
     title: "Rajat Kumar Dua — Full-Stack Developer, React Native Engineer & UI/UX Designer",
     description: "Explore Rajat Kumar Dua’s cinematic mobile portfolio featuring web development, mobile apps, AI-powered tools, visual design, and interactive digital experiences.",
     images: [{
-      url: "/photo/about.webp",
-      width: 852,
-      height: 1846,
-      alt: "RajatWorks cinematic About-section artwork",
+      url: "/social-preview.jpg",
+      width: 1200,
+      height: 630,
+      alt: "RajatWorks — Rajat Kumar Dua, full-stack developer and UI/UX designer",
     }],
   },
 
@@ -58,7 +58,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Rajat Kumar Dua — Full-Stack Developer & UI/UX Designer",
     description: "Explore Rajat Kumar Dua’s cinematic mobile portfolio featuring web development, mobile apps, AI-powered tools, visual design, and interactive digital experiences.",
-    images: ["/photo/about.webp"],
+    images: ["/social-preview.jpg"],
     creator: "@rajat",
   },
 
