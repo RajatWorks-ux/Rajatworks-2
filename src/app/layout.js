@@ -76,10 +76,13 @@ export const metadata = {
 
   icons: {
     icon: [
-      { url: "/photo/favicon.png", type: "image/png" },
+      { url: "/rw-favicon.svg?v=2", type: "image/svg+xml" },
+      { url: "/rw-favicon.ico?v=2", type: "image/x-icon" },
+      { url: "/rw-icon-192.png?v=2", sizes: "192x192", type: "image/png" },
+      { url: "/rw-icon-512.png?v=2", sizes: "512x512", type: "image/png" },
     ],
-    apple: "/photo/favicon.png",
-    shortcut: "/photo/favicon.png",
+    apple: [{ url: "/rw-apple-icon.png?v=2", sizes: "180x180", type: "image/png" }],
+    shortcut: "/rw-favicon.ico?v=2",
   },
 
   manifest: "/manifest.json",
